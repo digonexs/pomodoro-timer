@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="settings">
+      <div class="input-group">
+        <label for="focus-time-input"><span class="highlight">Foco (min):</span></label>
+        <input type="number" id="focus-time-input" min="1" value="25">
+      </div>
+      <div class="input-group">
+        <label for="break-time-input"><span class="highlight">Descanso (min):</span></label>
+        <input type="number" id="break-time-input" min="1" value="5">
+      </div>
+    </div>
+    <div class="tomato">
+      <div class="leaf"></div>
+      <div class="timer-display">
+        <span id="minutes">25</span>:<span id="seconds">00</span>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="start-pause">Iniciar</button>
+      <button id="reset">Resetar</button>
+    </div>
+  </div>
+  <div id="error-message" class="hidden">O tempo mínimo é de 5 minutos!</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

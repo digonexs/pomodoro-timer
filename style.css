@@ -53,6 +53,11 @@ input[type="number"]:focus {
   box-shadow: 0 0 8px rgba(92, 184, 92, 0.5);
 }
 
+.highlight {
+  font-weight: bold;
+  color: #d9534f;
+}
+
 .tomato {
   width: 100%;
   max-width: 200px;

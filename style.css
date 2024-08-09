@@ -1,0 +1,189 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f7f7f7;
+  font-family: "Arial", sans-serif;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.settings {
+  margin-bottom: 40px; /* Aumenta o espaçamento entre os inputs e o tomate */
+}
+
+.input-group {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  margin-right: 10px;
+  min-width: 150px; /* Ajusta o espaço mínimo do rótulo para alinhamento */
+  text-align: right; /* Alinha o texto do rótulo à direita */
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 8px;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid #d9534f;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #5cb85c;
+  box-shadow: 0 0 8px rgba(92, 184, 92, 0.5);
+}
+
+.tomato {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: 1; /* Mantém a proporção 1:1 */
+  background-color: #d9534f;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; /* Adiciona um espaço superior para afastar do input e rótulo */
+}
+
+.leaf {
+  width: 40px;
+  height: 20px;
+  background-color: #5cb85c;
+  position: absolute;
+  top: -25px; /* Mantém a folha na posição correta em relação ao tomate */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px 20px 0 0;
+}
+
+.timer-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+#error-message {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d9534f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#error-message.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    margin-bottom: 5px;
+    min-width: auto;
+    text-align: center;
+  }
+
+  input[type="number"] {
+    width: 100px;
+  }
+
+  .timer-display {
+    font-size: 2.5rem;
+  }
+
+  .controls button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+
+  input[type="number"] {
+    width: 80px;
+    font-size: 0.9rem;
+  }
+
+  .timer-display {
+    font-size: 2rem;
+  }
+
+  .controls button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .tomato {
+    max-width: 150px;
+  }
+}
